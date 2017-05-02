@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/setTinyMCEFields/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2017 
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.setTinyMCEFields.displayName">Set TinyMCE Fields</message>
+	<message key="plugins.generic.setTinyMCEFields.description">Removes TinyMCE from some of the pages.</message>
+
+</locale>

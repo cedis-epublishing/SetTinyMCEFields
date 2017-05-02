@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/setTinyMCEFields/locale/de_DE/locale.xml
+  *
+  * Copyright (c) 2017 
+  -->
+ 
+<locale name="de_DE" full_name="German">
+
+	<message key="plugins.generic.setTinyMCEFields.displayName">TinyMCE Felder</message>
+	<message key="plugins.generic.setTinyMCEFields.description">Entfernt den TinyMCE von ausgewaehlten Text-Feldern</message>
+
+</locale>
