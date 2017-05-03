@@ -9,6 +9,9 @@ git clone https://github.com/CFanselow/setTinyMCEFields.git
 tar -cvzf setTinyMCEFields.tar.gz setTinyMCEFields
 cp setTinyMCEFields.tar.gz <my_ojs_installation>/plugins/generic/
 tar -xvzf setTinyMCEFields.tar.gz
+
+php tools/upgrade.php upgrade
+
 ```
 
 # Activation
