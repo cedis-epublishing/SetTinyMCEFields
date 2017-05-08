@@ -19,6 +19,7 @@ Using Download and installing via GUI:
 2. unzip
 3. tar -cvzf setTinyMCEFields.tar.gz setTinyMCEFields
 4. in the GUI, go to System Plugin -> Install a new plugin and upload the tar.gz-file
+5. disable, enable
 
 ```
 
