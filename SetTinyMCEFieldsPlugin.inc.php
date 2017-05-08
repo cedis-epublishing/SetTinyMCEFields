@@ -39,6 +39,13 @@ class SetTinyMCEFieldsPlugin extends GenericPlugin {
 	function getDescription() {
 		return __('plugins.generic.setTinyMCEFields.description');
 	}
+	
+	/**
+	 * copydoc PKPPlugin::isSitePlugin()
+	 */
+	function isSitePlugin() {
+		return true;
+	}	
 
 	/**
 	 * Setting the TinyMCE fields
