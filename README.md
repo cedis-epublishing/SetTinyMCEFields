@@ -1,5 +1,6 @@
 # SetTinyMCEFields
 
+ master
 Plugin to disable the TinyMCE in some of the fields in OJS.
 
 # Installation
@@ -29,3 +30,6 @@ Using Download and installing via GUI:
 Home > User > Journal Management > Plugin Management > Generic Plugins
 ```
  
+=======
+Plugin to disable the TinyMCE in some of the fields in OJS. 
+ ojs-stable-2_4_8
