@@ -11,8 +11,10 @@ Using Git:
 1. cd [my_ojs_installation]/plugins/generic
 2. git clone https://github.com/CFanselow/setTinyMCEFields.git
 (3. chown ...)
-4. cd [my_ojs_installation]
-5. php tools/upgrade.php upgrade
+4. cd setTinyMCEFields
+5. git checkout [version]
+6. cd [my_ojs_installation]
+7. php tools/upgrade.php upgrade
 
 Using Download and installing via GUI:
 
