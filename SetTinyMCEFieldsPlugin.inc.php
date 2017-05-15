@@ -46,6 +46,20 @@ class SetTinyMCEFieldsPlugin extends GenericPlugin {
 	function isSitePlugin() {
 		return true;
 	}	
+	
+	/**
+	* @see PKPPlugin::getInstallSitePluginSettingsFile()
+	*/
+	function getInstallSitePluginSettingsFile() {
+		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/**
+	* @see PKPPlugin::getTemplatePath()
+	*/
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
+	}	
 
 	/**
 	 * Setting the TinyMCE fields
@@ -60,21 +74,76 @@ class SetTinyMCEFieldsPlugin extends GenericPlugin {
 		$fields =& $params[1];
 		$page = Request::getRequestedPage();
 		$op = Request::getRequestedOp();
-
-		if ($page=="user" && in_array($op,array('register','profile','saveProfile','registerUser'))) {
+		$disableAuthorFields = $this->getSetting(0,'disableAuthorFields');
+		
+		if ($page=="user") {
 			
 			// remove TinyMCE from all text areas on the selected pages
 			$fields=array();
 		}
 		
-		if ($page=="comment" && in_array($op,array('add'))) {
+		if ($page=="comment") {
 			
 			// remove TinyMCE from all text areas on the selected pages
 			$fields=array();
 		}		
-		
+	
+		if ($disableAuthorFields && $page="author") {
+			
+			$fields=array();
+		}
+
 		return false;
 	}
+	
+	/**
+	* @see PKPPlugin::manage()
+	*/
+	function manage($verb, $args, &$message, &$messageParams) {
+		
+		$returner = parent::manage($verb, $args, $message, $messageParams);
+		if (!$returner) return false;
+		$this->import('SetTinyMCEFieldsSettingsForm');
+
+		$templateMgr =& TemplateManager::getManager();
+		$templateMgr->register_function('plugin_url', array(&$this, 'smartyPluginUrl'));
+		switch($verb) {
+			case 'settings':
+				$settingsForm = new SetTinyMCEFieldsSettingsForm($this);
+				$settingsForm->initData();
+				$settingsForm->display();
+				break;
+			case 'save':
+				$settingsForm = new SetTinyMCEFieldsSettingsForm($this);
+				$settingsForm->readInputData();
+				if ($settingsForm->validate()) {
+					$settingsForm->execute();
+					$message = NOTIFICATION_TYPE_SUCCESS;
+					$messageParams = array('contents' => __('plugins.generic.setTinyMCEFields.settings.saved'));
+					return false;
+				} else {
+					$settingsForm->display();
+				}
+				break;
+			default:
+				return $returner;
+		}
+		return true;
+	}
+
+	//
+	// Implement template methods from GenericPlugin.
+	//
+	/**
+	* @see GenericPlugin::getManagementVerbs()
+	*/
+	function getManagementVerbs() {
+		$verbs = parent::getManagementVerbs();
+		if ($this->getEnabled()) {
+			$verbs[] = array('settings', __('manager.plugins.settings'));
+		}
+		return $verbs;
+	}	
 
 }
 ?>
