@@ -88,7 +88,7 @@ class SetTinyMCEFieldsPlugin extends GenericPlugin {
 			$fields=array();
 		}		
 	
-		if ($disableAuthorFields && $page="author") {
+		if ($disableAuthorFields && $page=="author") {
 
 			// allow managers and editors to edit author fields
 			$user =& Request::getUser();
