@@ -89,22 +89,23 @@ class SetTinyMCEFieldsPlugin extends GenericPlugin {
 		}		
 	
 		if ($disableAuthorFields && $page="author") {
-			
+
+			// allow managers and editors to edit author fields
 			$user =& Request::getUser();
 			$roleDao =& DAORegistry::getDAO('RoleDAO');
 			$roles = $roleDao->getRolesByUserId($user->getId());
 
-			$allowTinyMCEFields  =false;
+			$allowTinyMCEFields = false;
 			foreach ($roles as $role) {
 				if (in_array($role->getRoleId(), array(ROLE_ID_SITE_ADMIN,ROLE_ID_JOURNAL_MANAGER,ROLE_ID_EDITOR,ROLE_ID_SECTION_EDITOR))) {
 					$allowTinyMCEFields = true;
 				}
 			}
 			if (!$allowTinyMCEFields) {
+				// remove TinyMCE from all text areas on the selected pages
 				$fields=array();
 			}
 		}
-
 		return false;
 	}
 	
