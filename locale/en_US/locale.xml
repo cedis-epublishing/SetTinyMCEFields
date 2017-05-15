@@ -13,7 +13,7 @@
 	<message key="plugins.generic.setTinyMCEFields.description">Removes TinyMCE from some of the pages.</message>
 	
 	<message key="plugins.generic.setTinyMCEFields.settings.authorFields">TinyMCE fields for users with author role</message>
-	<message key="plugins.generic.setTinyMCEFields.settings.disableAuthorFields.description">If you allow authors to self register with you journal(s), you should remove the TinyMCE-Editor from all text areas in the submission process. Otherwise, anyone can register with your site and upload images that are publicly available.</message>
+	<message key="plugins.generic.setTinyMCEFields.settings.disableAuthorFields.description">If you allow authors to self register with your journal(s), you should remove the TinyMCE-Editor from all text areas in the submission process. Otherwise, anyone can register with your site and upload images that will be publicly available.</message>
 	<message key="plugins.generic.setTinyMCEFields.settings.disableAuthorFields">Remove TinyMCE-Editor from all text areas in the submission process</message>	
 	
 
