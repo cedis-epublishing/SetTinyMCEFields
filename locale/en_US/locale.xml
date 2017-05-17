@@ -16,5 +16,6 @@
 	<message key="plugins.generic.setTinyMCEFields.settings.disableAuthorFields.description">If you allow authors to self register with your journal(s), you should remove the TinyMCE-Editor from all text areas in the submission process. Otherwise, anyone can register with your site and upload images that will be publicly available.</message>
 	<message key="plugins.generic.setTinyMCEFields.settings.disableAuthorFields">Remove TinyMCE-Editor from all text areas in the submission process</message>	
 	
+	<message key="plugins.generic.setTinyMCEFields.settings.saved">Set Tiny MCE fields plugin settings saved</message>
 
 </locale>

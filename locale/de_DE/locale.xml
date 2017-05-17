@@ -16,6 +16,7 @@
 	<message key="plugins.generic.setTinyMCEFields.settings.disableAuthorFields.description">Wenn Sie die Selbstregistrierung als Autor/in eingeschaltet haben, sollten Sie den TinyMCE Editor bei allen Textfeldern im Einreichungsprozess entfernen. Ansonsten können beliebige Personen sich bei Ihrer Zeitschrift registrieren und Bilder hochladen, die öffentlich einsehbar sind.</message>
 	<message key="plugins.generic.setTinyMCEFields.settings.disableAuthorFields">Den TinyMCE Editor bei allen Textfeldern im Einreichungsprozess entfernen</message>	
 	
+	<message key="plugins.generic.setTinyMCEFields.settings.saved">Einstellungen des TinyMCE-Felder-Plug-Ins gespeichert</message>
 	
 
 </locale>
