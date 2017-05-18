@@ -1,7 +1,9 @@
 # SetTinyMCEFields
 
- master
-Plugin to disable the TinyMCE in some of the fields in OJS.
+Plugin to disable the TinyMCE in some of the fields in OJS:
+- all TinyMCE fields in the profile
+- the TinyMCE field for comments on an article
+- optional (plugin settings): all TinyMCE fields during the submission process
 
 # Installation
 
@@ -11,8 +13,10 @@ Using Git:
 1. cd [my_ojs_installation]/plugins/generic
 2. git clone https://github.com/CFanselow/setTinyMCEFields.git
 (3. chown ...)
-4. cd [my_ojs_installation]
-5. php tools/upgrade.php upgrade
+4. cd setTinyMCEFields
+5. git checkout [version]
+6. cd [my_ojs_installation]
+7. php tools/upgrade.php upgrade or tools/installPluginVersion.php (see http://forum.pkp.sfu.ca/t/installing-a-plugin-via-git/30827)
 
 Using Download and installing via GUI:
 
